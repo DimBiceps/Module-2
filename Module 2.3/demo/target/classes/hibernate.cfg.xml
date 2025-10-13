@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC  
+   "-//Hibernate/Hibernate Configuration DTD 5.3//EN"  
+   "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">  
+
+<hibernate-configuration>
+  <session-factory>
+    <!-- подключение к БД -->
+    <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+    <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/user_db</property>
+    <property name="hibernate.connection.username">postgres</property>
+    <property name="hibernate.connection.password">Kemmill12_</property>
+
+    <!-- язык БД - постгре -->
+    <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+    <!-- проверка схемы базы данных на соответствие, описанной в классе-сущности -->
+    <property name="hibernate.hbm2ddl.auto">validate</property>
+
+    <!-- логирование отключаем, т.к. настраиваем в logback -->
+    <property name="show_sql">false</property> 
+    <property name="format_sql">false</property>
+
+    <!-- размер пула соединений -->
+    <property name="hibernate.connection.pool_size">5</property>
+
+    <!-- регистрируем сущность -->
+    <mapping class="module22.entity.User"/>
+  </session-factory>
+</hibernate-configuration>
