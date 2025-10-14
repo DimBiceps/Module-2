@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: module23.dao.HibernateUserDaoIT
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 5.212 s -- in module23.dao.HibernateUserDaoIT

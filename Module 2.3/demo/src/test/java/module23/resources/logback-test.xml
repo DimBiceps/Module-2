@@ -5,8 +5,13 @@
     </encoder>
   </appender>
 
+  <logger name="module23" level="INFO"/>
+  <logger name="module23.service" level="INFO"/>
+
   <logger name="org.hibernate" level="WARN"/>
-  <root level="INFO">
+  <logger name="org.testcontainers" level="INFO"/>
+
+  <root level="ERROR">
     <appender-ref ref="STDOUT"/>
   </root>
 </configuration>

@@ -1,5 +1,6 @@
-d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\config\TestHibernateUtil.java
-d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\dao\HibernateUserDaoIntegrationTests.java
+d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\config\HibernateTestUtil.java
+d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\dao\BasePostgresIT.java
+d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\dao\HibernateUserDaoIT.java
 d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\service\DefaultUserService.java
 d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\service\DefaultUserServiceTest.java
 d:\Java\Education\Module 2\Module 2.3\demo\src\test\java\module23\service\UserService.java

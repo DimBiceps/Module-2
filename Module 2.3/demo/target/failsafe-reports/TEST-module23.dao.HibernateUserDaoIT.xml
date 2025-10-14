@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-failsafe-plugin/xsd/failsafe-test-report-3.0.xsd" version="3.0" name="module23.dao.HibernateUserDaoIT" time="5.212" tests="5" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="java.specification.version" value="25"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="Cp1252"/>
+    <property name="java.class.path" value="d:\Java\Education\Module 2\Module 2.3\demo\target\test-classes;d:\Java\Education\Module 2\Module 2.3\demo\target\demo-1.0-SNAPSHOT.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Dim\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Dim\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Dim\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Dim\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Dim\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Dim\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Dim\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Dim\.m2\repository\org\testcontainers\junit-jupiter\1.20.2\junit-jupiter-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\testcontainers\1.20.2\testcontainers-1.20.2.jar;C:\Users\Dim\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Dim\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Dim\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Dim\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Dim\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Dim\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.0\docker-java-transport-zerodep-3.4.0.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Dim\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Dim\.m2\repository\org\testcontainers\postgresql\1.20.2\postgresql-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\jdbc\1.20.2\jdbc-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\database-commons\1.20.2\database-commons-1.20.2.jar;C:\Users\Dim\.m2\repository\org\hibernate\hibernate-core\5.6.0.Final\hibernate-core-5.6.0.Final.jar;C:\Users\Dim\.m2\repository\org\jboss\logging\jboss-logging\3.4.2.Final\jboss-logging-3.4.2.Final.jar;C:\Users\Dim\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Dim\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Dim\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Dim\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\Dim\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Dim\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Dim\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Dim\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Dim\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Dim\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Dim\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Dim\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Dim\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Dim\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Dim\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Dim\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\Dim\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Dim\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Asia/Yekaterinburg"/>
+    <property name="user.country.format" value="RU"/>
+    <property name="os.name" value="Windows 11"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-25\bin"/>
+    <property name="sun.java.command" value="C:\Users\Dim\AppData\Local\Temp\surefire3419956003897862956\surefirebooter-20251014144551404_3.jar C:\Users\Dim\AppData\Local\Temp\surefire3419956003897862956 2025-10-14T14-45-51_200-jvmRun1 surefire-20251014144551404_1tmp surefire_0-20251014144551404_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="d:\Java\Education\Module 2\Module 2.3\demo\target\test-classes;d:\Java\Education\Module 2\Module 2.3\demo\target\demo-1.0-SNAPSHOT.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.2\junit-jupiter-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.2\junit-jupiter-api-5.10.2.jar;C:\Users\Dim\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Dim\.m2\repository\org\junit\platform\junit-platform-commons\1.10.2\junit-platform-commons-1.10.2.jar;C:\Users\Dim\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.2\junit-jupiter-params-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.2\junit-jupiter-engine-5.10.2.jar;C:\Users\Dim\.m2\repository\org\junit\platform\junit-platform-engine\1.10.2\junit-platform-engine-1.10.2.jar;C:\Users\Dim\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Dim\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Dim\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Dim\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Dim\.m2\repository\org\testcontainers\junit-jupiter\1.20.2\junit-jupiter-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\testcontainers\1.20.2\testcontainers-1.20.2.jar;C:\Users\Dim\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\Dim\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Dim\.m2\repository\org\apache\commons\commons-compress\1.24.0\commons-compress-1.24.0.jar;C:\Users\Dim\.m2\repository\org\rnorth\duct-tape\duct-tape\1.0.8\duct-tape-1.0.8.jar;C:\Users\Dim\.m2\repository\org\jetbrains\annotations\17.0.0\annotations-17.0.0.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-api\3.4.0\docker-java-api-3.4.0.jar;C:\Users\Dim\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.10.3\jackson-annotations-2.10.3.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-transport-zerodep\3.4.0\docker-java-transport-zerodep-3.4.0.jar;C:\Users\Dim\.m2\repository\com\github\docker-java\docker-java-transport\3.4.0\docker-java-transport-3.4.0.jar;C:\Users\Dim\.m2\repository\net\java\dev\jna\jna\5.13.0\jna-5.13.0.jar;C:\Users\Dim\.m2\repository\org\testcontainers\postgresql\1.20.2\postgresql-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\jdbc\1.20.2\jdbc-1.20.2.jar;C:\Users\Dim\.m2\repository\org\testcontainers\database-commons\1.20.2\database-commons-1.20.2.jar;C:\Users\Dim\.m2\repository\org\hibernate\hibernate-core\5.6.0.Final\hibernate-core-5.6.0.Final.jar;C:\Users\Dim\.m2\repository\org\jboss\logging\jboss-logging\3.4.2.Final\jboss-logging-3.4.2.Final.jar;C:\Users\Dim\.m2\repository\javax\persistence\javax.persistence-api\2.2\javax.persistence-api-2.2.jar;C:\Users\Dim\.m2\repository\antlr\antlr\2.7.7\antlr-2.7.7.jar;C:\Users\Dim\.m2\repository\org\jboss\spec\javax\transaction\jboss-transaction-api_1.2_spec\1.1.1.Final\jboss-transaction-api_1.2_spec-1.1.1.Final.jar;C:\Users\Dim\.m2\repository\org\jboss\jandex\2.2.3.Final\jandex-2.2.3.Final.jar;C:\Users\Dim\.m2\repository\com\fasterxml\classmate\1.5.1\classmate-1.5.1.jar;C:\Users\Dim\.m2\repository\javax\activation\javax.activation-api\1.2.0\javax.activation-api-1.2.0.jar;C:\Users\Dim\.m2\repository\org\hibernate\common\hibernate-commons-annotations\5.1.2.Final\hibernate-commons-annotations-5.1.2.Final.jar;C:\Users\Dim\.m2\repository\javax\xml\bind\jaxb-api\2.3.1\jaxb-api-2.3.1.jar;C:\Users\Dim\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.1\jaxb-runtime-2.3.1.jar;C:\Users\Dim\.m2\repository\org\glassfish\jaxb\txw2\2.3.1\txw2-2.3.1.jar;C:\Users\Dim\.m2\repository\com\sun\istack\istack-commons-runtime\3.0.7\istack-commons-runtime-3.0.7.jar;C:\Users\Dim\.m2\repository\org\jvnet\staxex\stax-ex\1.8\stax-ex-1.8.jar;C:\Users\Dim\.m2\repository\com\sun\xml\fastinfoset\FastInfoset\1.2.15\FastInfoset-1.2.15.jar;C:\Users\Dim\.m2\repository\org\postgresql\postgresql\42.7.3\postgresql-42.7.3.jar;C:\Users\Dim\.m2\repository\org\checkerframework\checker-qual\3.42.0\checker-qual-3.42.0.jar;C:\Users\Dim\.m2\repository\org\slf4j\slf4j-api\2.0.12\slf4j-api-2.0.12.jar;C:\Users\Dim\.m2\repository\ch\qos\logback\logback-classic\1.4.14\logback-classic-1.4.14.jar;C:\Users\Dim\.m2\repository\ch\qos\logback\logback-core\1.4.14\logback-core-1.4.14.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\Dim"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-09-16"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-25"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="d:\Java\Education\Module 2\Module 2.3\demo"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\Dim\AppData\Local\Temp\surefire3419956003897862956\surefirebooter-20251014144551404_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="25+37-LTS-3491"/>
+    <property name="user.name" value="Dim"/>
+    <property name="stdout.encoding" value="Cp1252"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\Dim\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\Dim\AppData\Local\Temp\"/>
+    <property name="java.version" value="25"/>
+    <property name="user.dir" value="d:\Java\Education\Module 2\Module 2.3\demo"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.language.format" value="ru"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="Cp1252"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-25\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\Docker\Docker\resources\bin;C:\Users\Dim\AppData\Local\Microsoft\WindowsApps;C:\Users\Dim\AppData\Local\GitHubDesktop\bin;C:\Users\Dim\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Dim\AppData\Local\Programs\Windsurf\bin;c:\Users\Dim\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="Cp1252"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="25+37-LTS-3491"/>
+    <property name="stdin.encoding" value="Cp1252"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="69.0"/>
+  </properties>
+  <testcase name="create_validates_fields" classname="module23.dao.HibernateUserDaoIT" time="0.11">
+    <system-out><![CDATA[14:45:56.193 WARN  [main] o.hibernate.orm.connections.pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+14:45:56.783 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - SQL Warning Code: 0, SQLState: 00000
+14:45:56.783 WARN  [main] o.h.e.jdbc.spi.SqlExceptionHelper - table "users" does not exist, skipping
+14:45:56.824 WARN  [main] module22.dao.HibernateUserDao - Validation failed: name is empty
+14:45:56.825 WARN  [main] module22.dao.HibernateUserDao - Validation failed: email is empty
+14:45:56.825 WARN  [main] module22.dao.HibernateUserDao - Validation failed: age 999 out of range
+]]></system-out>
+  </testcase>
+  <testcase name="findAll_returns_inserted_rows" classname="module23.dao.HibernateUserDaoIT" time="0.109">
+    <system-out><![CDATA[14:45:56.953 INFO  [main] module22.dao.HibernateUserDao - User created successfully: id=1, name=A, email=a@a, age=20
+14:45:56.957 INFO  [main] module22.dao.HibernateUserDao - User created successfully: id=2, name=B, email=b@b, age=21
+14:45:57.023 INFO  [main] module22.dao.HibernateUserDao - Find all: returned 2
+]]></system-out>
+  </testcase>
+  <testcase name="update_updates_fields" classname="module23.dao.HibernateUserDaoIT" time="0.033">
+    <system-out><![CDATA[14:45:57.040 INFO  [main] module22.dao.HibernateUserDao - User created successfully: id=1, name=Bob, email=bob@example.com, age=31
+14:45:57.050 INFO  [main] module22.dao.HibernateUserDao - Find by id: found id=1
+14:45:57.058 INFO  [main] module22.dao.HibernateUserDao - User updated successfully: name=Robert, id=1, email=bob@example.com
+14:45:57.062 INFO  [main] module22.dao.HibernateUserDao - Find by id: found id=1
+]]></system-out>
+  </testcase>
+  <testcase name="delete_removes_row" classname="module23.dao.HibernateUserDaoIT" time="0.046">
+    <system-out><![CDATA[14:45:57.083 INFO  [main] module22.dao.HibernateUserDao - User created successfully: id=1, name=Kek, email=k@k, age=40
+14:45:57.092 INFO  [main] module22.dao.HibernateUserDao - Find by id: found id=1
+14:45:57.102 INFO  [main] module22.dao.HibernateUserDao - User deleted successfully: id=1, name=Kek, email=k@k, age=40, created_at=2025-10-14T14:45:57.068877+05:00
+14:45:57.105 WARN  [main] module22.dao.HibernateUserDao - Find by id: not found id=1
+]]></system-out>
+  </testcase>
+  <testcase name="create_and_findById_work" classname="module23.dao.HibernateUserDaoIT" time="0.015">
+    <system-out><![CDATA[14:45:57.119 INFO  [main] module22.dao.HibernateUserDao - User created successfully: id=1, name=Alice, email=alice@example.com, age=25
+14:45:57.123 INFO  [main] module22.dao.HibernateUserDao - Find by id: found id=1
+]]></system-out>
+  </testcase>
+</testsuite>

@@ -1,0 +1,5 @@
+module22\dao\HibernateUserDao.class
+module22\entity\User.class
+module22\Main.class
+module22\config\HibernateUtil.class
+module22\dao\UserDao.class

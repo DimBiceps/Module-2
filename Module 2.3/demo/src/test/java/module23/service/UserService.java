@@ -1,4 +1,3 @@
-// src/main/java/module22/service/UserService.java
 package module23.service;
 
 import java.util.List;

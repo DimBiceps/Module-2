@@ -8,6 +8,7 @@
   </appender>
 
   <logger name="module22" level="INFO"/>
+  <logger name="module23" level="INFO"/>
   <logger name="org.hibernate" level="WARN"/>
 
   <root level="ERROR">
