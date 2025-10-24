@@ -1,0 +1,11 @@
+module24\userservice\UserServiceApplication.class
+module24\userservice\repo\UserRepository.class
+module24\userservice\service\UserService.class
+module24\userservice\web\mapper\UserMapper.class
+module24\userservice\domain\User.class
+module24\userservice\service\NotFoundException.class
+module24\userservice\web\dto\UserCreateUpdateDto.class
+module24\userservice\service\DefaultUserService.class
+module24\userservice\web\ApiExceptionHandler.class
+module24\userservice\web\UserController.class
+module24\userservice\web\dto\UserDto.class
