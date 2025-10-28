@@ -1,0 +1,14 @@
+module25\userservice\repo\UserRepository.class
+module25\userservice\web\dto\UserDto.class
+module25\userservice\kafka\KafkaConfig.class
+module25\userservice\service\UserService.class
+module25\userservice\domain\User.class
+module25\userservice\web\ApiExceptionHandler.class
+module25\userservice\web\dto\UserCreateUpdateDto.class
+module25\userservice\web\mapper\UserMapper.class
+module25\userservice\web\UserController.class
+module25\userservice\service\NotFoundException.class
+module25\userservice\kafka\UserEvent.class
+module25\userservice\kafka\UserEventPublisher.class
+module25\userservice\service\DefaultUserService.class
+module25\userservice\UserServiceApplication.class

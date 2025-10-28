@@ -1,0 +1,27 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/user_db
+    username: postgres
+    password: Kemmill12_
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+  jackson:
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+app:
+  kafka:
+    user-topic: user.events
+
+kafka:
+  bootstrap-servers: ${KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+
+logging:
+  level:
+    org.hibernate.SQL: warn
+    org.springframework: info
