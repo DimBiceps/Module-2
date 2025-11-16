@@ -2,6 +2,7 @@ package module23.service;
 
 import module22.dao.UserDao;
 import module22.entity.User;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
@@ -9,6 +10,7 @@ import org.mockito.ArgumentCaptor;
 import java.util.List;
 import java.util.Optional;
 
+import org.checkerframework.checker.units.qual.t;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -20,8 +22,8 @@ class DefaultUserServiceTest {
 
     @BeforeEach
     void setUp() {
-        userDao = mock(UserDao.class);
-        service = new DefaultUserService(userDao);
+        this.userDao = mock(UserDao.class);
+        this.service = new DefaultUserService(userDao);
     }
 
     @Test
@@ -36,9 +38,8 @@ class DefaultUserServiceTest {
     @Test
     void getAllUsers_returns_list_from_DAO() {
         when(userDao.findAll()).thenReturn(List.of(
-                new User("A","a@a",20),
-                new User("B","b@b",21)
-        ));
+                new User("A", "a@a", 20),
+                new User("B", "b@b", 21)));
 
         List<User> list = service.getAllUsers();
         assertEquals(2, list.size());
@@ -47,7 +48,7 @@ class DefaultUserServiceTest {
 
     @Test
     void getUserById_propagates_found_value() {
-        User u = new User("Kek","k@k",40);
+        User u = new User("Kek", "k@k", 40);
         u.setId(5L);
         when(userDao.findById(5L)).thenReturn(Optional.of(u));
 
@@ -59,7 +60,7 @@ class DefaultUserServiceTest {
 
     @Test
     void updateUser_calls_DAO_update_with_same_object() {
-        User u = new User("A","a@a",20);
+        User u = new User("A", "a@a", 20);
         u.setId(99L);
 
         service.updateUser(u);
@@ -78,7 +79,7 @@ class DefaultUserServiceTest {
 
     @Test
     void deleteUser_deletes_when_found() {
-        User u = new User("X","x@x",30);
+        User u = new User("X", "x@x", 30);
         u.setId(8L);
         when(userDao.findById(8L)).thenReturn(Optional.of(u));
 

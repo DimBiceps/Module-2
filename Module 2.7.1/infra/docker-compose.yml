@@ -1,0 +1,132 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: postgres
+    environment:
+      POSTGRES_DB: user_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: Kemmill12_
+    ports:
+      - "5432:5432"
+    networks:
+      - microservices-net
+
+  zookeeper:
+    image: confluentinc/cp-zookeeper:7.6.1
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports:
+      - "2181:2181"
+    networks:
+      - microservices-net
+
+  kafka:
+    image: confluentinc/cp-kafka:7.6.1
+    container_name: kafka
+    depends_on:
+      - zookeeper
+    ports:
+      - "9092:9092"
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - microservices-net
+
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: mailhog
+    ports:
+      - "1025:1025"  # SMTP
+      - "8025:8025"  # Web UI
+    networks:
+      - microservices-net
+
+  config-server:
+    build:
+      context: ../config-server
+    container_name: config-server
+    depends_on:
+      - postgres
+      - kafka
+    environment:
+      SPRING_PROFILES_ACTIVE: native
+      SPRING_CLOUD_CONFIG_SERVER_NATIVE_SEARCH_LOCATIONS: file:/config-repo
+    volumes:
+      - ../config-repo:/config-repo:ro
+    ports:
+      - "8888:8888"
+    networks:
+      - microservices-net
+
+  discovery-service:
+    build:
+      context: ../discovery-service
+    container_name: discovery-service
+    depends_on:
+      - config-server
+    ports:
+      - "8761:8761"
+    networks:
+      - microservices-net
+
+  user-service:
+    build:
+      context: ../demo
+    container_name: user-service
+    depends_on:
+      - config-server
+      - discovery-service
+      - postgres
+      - kafka
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+    ports:
+      - "8081:8081"
+    networks:
+      - microservices-net
+
+  notification-service:
+    build:
+      context: ../notification-service
+    container_name: notification-service
+    depends_on:
+      - config-server
+      - discovery-service
+      - kafka
+      - mailhog
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+      KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+      SMTP_HOST: mailhog
+      SMTP_PORT: 1025
+    ports:
+      - "8082:8082"
+    networks:
+      - microservices-net
+
+  gateway-service:
+    build:
+      context: ../gateway-service
+    container_name: gateway-service
+    depends_on:
+      - config-server
+      - discovery-service
+      - user-service
+      - notification-service
+    environment:
+      SPRING_CLOUD_CONFIG_URI: http://config-server:8888
+    ports:
+      - "8080:8080"
+    networks:
+      - microservices-net
+
+networks:
+  microservices-net:
+    driver: bridge

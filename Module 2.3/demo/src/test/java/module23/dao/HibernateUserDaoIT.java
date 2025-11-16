@@ -12,8 +12,8 @@ class HibernateUserDaoIT extends BasePostgresIT {
 
     @Test
     void create_and_findById_work() {
-        var dao = new HibernateUserDao(sessionFactory);
-        
+        var dao = new HibernateUserDao(super.sessionFactory);
+
         Long id = dao.create(new User("Alice", "alice@example.com", 25));
         assertNotNull(id);
 
